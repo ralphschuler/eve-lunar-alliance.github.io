@@ -1,0 +1,74 @@
+site_name: Studio Tech Docs
+nav:
+- Home:
+  - index.md
+
+theme:
+  features:
+  - navigation.tabs
+  - navigation.instant
+  - navigation.indexes
+  - toc.integrate
+  - search.suggest
+  - search.highlight
+  - search.share
+  - header.autohide
+  - attr_list
+  palette:
+    scheme: slate
+    primary: orange
+    accent: pink
+  name: material
+  custom_dir: theme
+
+extra:
+  social:
+  - icon: fontawesome/brands/github
+    link: https://github.bus.zalan.do/studiotech
+  - icon: fontawesome/brands/github
+    link: https://github.bus.zalan.do/studiotech
+
+markdown_extensions:
+- abbr
+- toc:
+    permalink: true
+- admonition
+- smarty
+- extra
+- codehilite
+- pymdownx.tabbed
+- pymdownx.magiclink
+- pymdownx.superfences
+- pymdownx.details
+- pymdownx.mark
+- pymdownx.snippets
+
+site_url: https://eve-lunar-alliance.github.io/
+repo_url: https://github.com/ralphschuler/eve-lunar-alliance.github.io
+remote_branch: pages
+
+plugins:
+- search:
+    prebuild_index: true
+- mermaid2:
+    arguments:
+      theme: 'dark'  
+- pdf-with-js:
+    enable: true
+- minify:
+    minify_html: true
+    minify_js: true
+    htmlmin_opts:
+      remove_comments: true
+- abs-to-rel  
+- git-revision-date:
+    enabled_if_env: CI
+- render_swagger
+
+extra_javascript:
+- https://unpkg.com/mermaid/dist/mermaid.min.js
+
+extra_css:
+- style.css
+
+strict: true

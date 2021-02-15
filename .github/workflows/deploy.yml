@@ -1,0 +1,24 @@
+name: deploy
+on:
+  push:
+    branches:
+      - main
+jobs:
+  Deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+      - run: pip install  mkdocs \
+                          mkdocs-material \
+                          mkdocs-mermaid2-plugin \
+                          mkdocs-pdf-with-js-plugin \
+                          mkdocs-minify-plugin \
+                          mkdocs-abs-rel-plugin \
+                          mkdocs-git-revision-date-plugin \
+                          mkdocs-render-swagger-plugin \
+                          git+https://github.com/inuits/mkdocs-subsite \
+                          mkdocs-snippet-plugin
+      - run: mkdocs gh-deploy --force

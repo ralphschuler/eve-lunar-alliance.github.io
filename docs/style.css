@@ -1,0 +1,19 @@
+*::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: hsla(0, 0%, 0%, 0.54);
+}
+*::-webkit-scrollbar-thumb {
+    background-color: hsla(33, 100%, 49%, 1);
+}
+*::-webkit-scrollbar-corner {
+    background-color: hsla(0, 0%, 0%, 0.87);
+}
+
+.small {
+    padding: .325em 1em !important;
+}
+
+.xsmall {
+    padding: .175em .5em !important;
+}

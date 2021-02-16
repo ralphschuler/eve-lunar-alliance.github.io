@@ -13,13 +13,5 @@ jobs:
           python-version: 3.x
           architecture: x64
       - run: pip3 install mkdocs \
-                          mkdocs-material \
-                          mkdocs-mermaid2-plugin \
-                          mkdocs-pdf-with-js-plugin \
-                          mkdocs-minify-plugin \
-                          mkdocs-abs-rel-plugin \
-                          mkdocs-git-revision-date-plugin \
-                          mkdocs-render-swagger-plugin \
-                          git+https://github.com/inuits/mkdocs-subsite \
-                          mkdocs-snippet-plugin
+                          mkdocs-material
       - run: mkdocs gh-deploy --force

@@ -50,20 +50,6 @@ remote_branch: pages
 plugins:
 - search:
     prebuild_index: true
-- mermaid2:
-    arguments:
-      theme: 'dark'  
-- pdf-with-js:
-    enable: true
-- minify:
-    minify_html: true
-    minify_js: true
-    htmlmin_opts:
-      remove_comments: true
-- abs-to-rel  
-- git-revision-date:
-    enabled_if_env: CI
-- render_swagger
 
 extra_javascript:
 - https://unpkg.com/mermaid/dist/mermaid.min.js
